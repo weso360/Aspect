@@ -1,0 +1,6 @@
+body{
+    background-image: linear-gradient(rgba(2, 3, 18, 0.354),rgba(5, 2, 14, 0.7)), url('./assets/Ocean.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-color: #00000000;
+}

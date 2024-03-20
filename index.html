@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet"  - updated font cdm
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+
+    <title>Aspect Development - Coming Soon</title>
+    <style>
+        body {
+            font-family: montserrat;
+            margin: 0;
+            padding: 0;
+            color: #fff; /* White text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width:auto;
+            
+            text-align: center;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 3.8rem;
+            margin-bottom: 10px;
+            font-weight: 450;
+        }
+        p, a{
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+           text-decoration: dashed;
+        }
+        .countdown {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: auto;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Replace 'your-logo.png' with the path to your logo image -->
+
+    <h1>Aspect Development</h1>
+
+    <div class="main" style="margin-top: 15.5vh;"> 
+        <div style="line-height: 1.5rem;"><h2 style="font-size: 3rem; font-weight:400">Coming Soon</h2>
+    <p>We're working hard to bring you amazing websites<br> we will be online shortly!</p>
+    
+    <!-- Countdown timer (optional) -->
+    <div class="countdown">
+        <p id="countdown-text">Launching in:</p>
+        <p id="countdown"></p>
+    </div></div> 
+</div>
+  
+    <!-- Email address -->
+    <div class="footer">
+        <p>For inquiries, contact us at: <a href="mailto:info@aspect-development.co.uk">info@aspect-development.co.uk</a></p>
+
+        <p><a href="https://www.tiktok.com/@aspectdevelopment"><i class="fa-brands fa-tiktok"></i></a> | <a href="https://www.instagram.com/aspectdevelopment/"><i class="fa-brands fa-instagram"></i></a></p>
+    </div>
+
+    <script>
+        // Set the launch date for your website
+        const launchDate = new Date('2024-04-1 00:00:00').getTime();
+
+        // Update the countdown every second
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            // If the launch date has passed, display a message
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById('countdown-text').innerHTML = 'Website is live!';
+                document.getElementById('countdown').innerHTML = '';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
